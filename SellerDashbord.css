@@ -1,0 +1,360 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar */
+#seller_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#seller_navbar_links span {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#seller_navbar_links span:hover {
+  color: #0d6efd;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#sellerName {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#logoutBtn {
+  cursor: pointer;
+  color: #dc3545;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border: 2px solid #dc3545;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#logoutBtn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Buttons container */
+#sellerBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+#sellerBtns span {
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgb(13 110 253 / 0.3);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+#sellerBtns span:hover {
+  background-color: #084cd9;
+}
+
+/* Products & Orders container */
+#productsListContainer {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 1.5rem;
+}
+
+/* Product / Order cards */
+.cardsContainer {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.cardsContainer:hover {
+  transform: translateY(-6px);
+}
+
+.cardsContainer img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.cardsContainer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.cardsContainer h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #0d6efd;
+}
+
+.cardsContainer p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Buttons inside cards */
+.btns-container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.btns-container button {
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0 2px 6px rgb(220 53 69 / 0.6);
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+
+.edit-btn {
+  background-color: #198754;
+  color: white;
+  box-shadow: 0 2px 6px rgb(25 135 84 / 0.6);
+}
+
+.edit-btn:hover {
+  background-color: #146c43;
+}
+
+/* Order cards specific */
+.order-card {
+  text-align: left;
+}
+
+.order-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.buyer-name {
+  font-weight: 600;
+}
+
+.order-status {
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.order-status.pending {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.order-status.completed {
+  background-color: #198754;
+}
+
+.order-status.cancelled {
+  background-color: #dc3545;
+}
+
+.shipping-address {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.cart-list {
+  list-style: inside disc;
+  margin-left: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.cart-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+/* Modal tweaks */
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  padding-top: 0;
+}
+
+/* Form inside modal */
+form .form-label {
+  font-weight: 600;
+  color: #212529;
+}
+
+form input,
+form select,
+form textarea {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.4);
+}
+
+/* Buttons inside modal */
+.d-flex.justify-content-end button {
+  min-width: 90px;
+  font-weight: 700;
+}
+
+.btn-success {
+  background-color: #198754;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #146c43;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive */
+
+/* Small devices */
+@media (max-width: 768px) {
+  #seller_navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #seller_navbar_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.7rem;
+  }
+
+  #sellerBtns {
+    justify-content: space-around;
+    gap: 0.8rem;
+    margin: 1rem auto 2rem;
+  }
+
+  #productsListContainer {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  #seller_navbar {
+    padding: 1rem;
+  }
+
+  #sellerName {
+    font-size: 0.9rem;
+  }
+
+  #logoutBtn {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  #sellerBtns span {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

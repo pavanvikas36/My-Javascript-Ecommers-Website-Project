@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* MyOrders.css */
+
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.img-thumbnail {
+  border-radius: 5px;
+  max-width: 60px;
+  height: auto;
+}
+
+.badge {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.no-orders {
+  margin-top: 5rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+
+/* MyOrders.css */
+
+
+
+#seller_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#seller_navbar_links {
+    display: flex;
+    gap: 20px;
+}
+
+#seller_navbar_links > a {
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: white;
+    border-radius: 4px;
+    transition:  color 0.3s ease;
+}
+
+#seller_navbar_links > a:hover {
+    background-color: black;
+    color: white;
+}
+
+#profile > a {
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#profile > a:hover {
+    background-color: black;
+    color: white;
+}
+
+#profile, #sellerBtns{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile > p{
+    /* border: 1px solid black; */
+    cursor: pointer;
+    margin: 6px 12px;
+    padding: 6px 12px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#profile > p:hover {
+    background-color: black;
+    color: white;
+}
+
+.cart-btn {
+      /* background-color: white; */
+      color: black;
+    }
+
+    .cart-btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .wishlist-btn {
+      /* background-color: #e67e22; */
+      color: black;
+    }
+
+    .wishlist-btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+#cartIcon{
+      cursor: pointer;
+      padding: 6px 8px;
+      background-color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    #cartIcon:hover{
+      background-color: black;
+      color: white;
+    }
+
+    #heartIcon{
+      cursor: pointer;
+      padding: 6px 8px;
+      background-color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    #heartIcon:hover{
+      background-color: black;
+      color: white;
+    }
+
+
+    /* Navbar customizations */
+#seller_navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#seller_navbar_links a {
+  margin-right: 15px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+#profile i {
+  transition: transform 0.2s;
+}
+
+#profile i:hover {
+  transform: scale(1.1);
+  /* color: #007bff; */
+}
+
+#buyerName {
+  font-weight: 500;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #seller_navbar_links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #buyerName {
+    margin-top: 5px;
+  }
+}
+
+
+/* Styling for No Orders message */
+.no-orders {
+  text-align: center;
+  margin-top: 3rem;
+  color: #555;
+}
+
+/* Image thumbnails in order items */
+.table img.img-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Make sure the accordion buttons use full width and flex */
+.accordion-button > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  /* Stack seller info and shipping info vertically */
+  .accordion-body .row.mb-3 {
+    flex-direction: column;
+  }
+
+  .accordion-body .col-md-6 {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Make table horizontally scrollable on small screens */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  /* Reduce padding in accordion button for small devices */
+  .accordion-button {
+    padding: 0.5rem 1rem;
+  }
+}
