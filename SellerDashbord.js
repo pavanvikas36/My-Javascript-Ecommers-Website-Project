@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Logout Successful!");
             localStorage.removeItem("sellerCredentails");
             localStorage.removeItem("productsList");
-            location.href = "./Login.html";
+            location.href = "https://myjavascriptprojectecom.netlify.app/";
         } catch (error) {
             console.error("Logout failed:", error);
             alert("Failed to logout");

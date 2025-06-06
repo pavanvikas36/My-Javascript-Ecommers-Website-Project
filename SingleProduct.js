@@ -218,6 +218,8 @@ let loginbuyer = JSON.parse(localStorage.getItem("buyerCredentails"));
 if (loginbuyer) {
     let buyerName = document.getElementById("buyerName");
     buyerName.innerHTML = loginbuyer.nameSeller;
+    let buyerNameMobile = document.getElementById("buyerNameMobile");
+    buyerNameMobile.innerHTML = loginbuyer.nameSeller
 }
 
 // Get product data from URL params

@@ -17,9 +17,11 @@ const loginbuyer = JSON.parse(localStorage.getItem("buyerCredentails"));
 const buyerNameElement = document.getElementById("buyerName");
 if (buyerNameElement) {
   if (loginbuyer && loginbuyer.nameSeller) {
-    buyerNameElement.textContent = loginbuyer.nameSeller;
+    buyerNameElement.innerHTML = loginbuyer.nameSeller;
+    let buyerNameMobile = document.getElementById("buyerNameMobile");
+    buyerNameMobile.innerHTML = loginbuyer.nameSeller
   } else {
-    buyerNameElement.textContent = "Guest";
+    buyerNameElement.innerHTML = "Guest";
   }
 }
 

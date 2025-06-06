@@ -576,6 +576,8 @@ console.log(loginbuyer);
 if (loginbuyer) {
   let buyerName = document.getElementById("buyerName");
   buyerName.innerHTML = loginbuyer.nameSeller;
+  let buyerNameMobile = document.getElementById("buyerNameMobile");
+  buyerNameMobile.innerHTML = loginbuyer.nameSeller
 }
 
 document.addEventListener("DOMContentLoaded", () => {

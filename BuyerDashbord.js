@@ -581,10 +581,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    const logoutBtnMobile = document.getElementById("logoutBtnMobile");
+    logoutBtnMobile.addEventListener("click", async()=>{
+        try {
+            await signOut(authentication);
+            alert("Logout Successful!");
+            localStorage.removeItem("buyerCredentails");
+            localStorage.removeItem("buyerOrders");
+            localStorage.removeItem("cart");
+            localStorage.removeItem("cartItems");
+            location.href = "https://myjavascriptprojectecom.netlify.app/";
+        } catch (error) {
+            console.error("Logout failed:", error);
+            alert("Failed to logout. Try again.");
+        }
+    })
+
     // Display buyer name
     const loginbuyer = JSON.parse(localStorage.getItem("buyerCredentails"));
     if (loginbuyer && loginbuyer.nameSeller) {
         buyerName.innerHTML = loginbuyer.nameSeller;
+        let buyerNameMobile = document.getElementById("buyerNameMobile");
+        buyerNameMobile.innerHTML = loginbuyer.nameSeller
     }
 
     // Skeleton loading
@@ -894,6 +912,13 @@ document.addEventListener("DOMContentLoaded", () => {
         location.href = "./AddToCart.html";
     });
 
+    const cartIconMobile = document.getElementById("cartIconMobile");
+    if (cartIconMobile) {
+        cartIconMobile.addEventListener("click", () => {
+        location.href = "./AddToCart.html";
+        });
+    }
+
     // My Orders button click handler
     myOrdersBtn.addEventListener("click", async (e) => {
         e.preventDefault();
@@ -912,7 +937,6 @@ document.addEventListener("DOMContentLoaded", () => {
 myOrdersBtn.addEventListener("click", () => {
     window.location.href = "./MyOrders.html";
 });
-
 
 
 // import {db, authentication} from "./fbConfig.js"
