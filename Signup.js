@@ -30,6 +30,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         console.log(userCredential, "user created")
         alert(`${role }Created Successfully`)
-        location.href = "./Login.html"
+        location.href = "https://myjavascriptprojectecom.netlify.app/"
     })
 })
